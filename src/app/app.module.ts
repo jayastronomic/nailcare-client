@@ -8,9 +8,10 @@ import { AppwrapperComponent } from './appwrapper/appwrapper.component';
 import { NgIconsModule } from '@ng-icons/core';
 import { bootstrapList, bootstrapPersonFill } from '@ng-icons/bootstrap-icons';
 import { HomeBannerComponent } from './home-banner/home-banner.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, AppwrapperComponent, HomeBannerComponent],
+  declarations: [AppComponent, NavbarComponent, AppwrapperComponent, HomeBannerComponent, HomeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
