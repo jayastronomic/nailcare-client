@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-appwrapper',
+  selector: 'app-wrapper',
   templateUrl: './appwrapper.component.html',
-  styleUrls: ['./appwrapper.component.css']
+  styleUrls: ['./appwrapper.component.css'],
 })
-export class AppwrapperComponent {
-
-}
+export class AppwrapperComponent {}
