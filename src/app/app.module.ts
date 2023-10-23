@@ -7,10 +7,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AppwrapperComponent } from './appwrapper/appwrapper.component';
 import { NgIconsModule } from '@ng-icons/core';
 import { bootstrapList, bootstrapPersonFill } from '@ng-icons/bootstrap-icons';
-import { ThreeDRendererComponent } from './three-d-renderer/three-d-renderer.component';
+import { HomeBannerComponent } from './home-banner/home-banner.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, AppwrapperComponent, ThreeDRendererComponent],
+  declarations: [AppComponent, NavbarComponent, AppwrapperComponent, HomeBannerComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
