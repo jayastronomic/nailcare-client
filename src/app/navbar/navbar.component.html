@@ -2,7 +2,7 @@
   <div class="">
     <img alt="logo" src="../../assets/NAILSURENT.svg" />
   </div>
-  <div class="flex space-x-8">
+  <div *ngIf="!isLoginRoute" class="flex space-x-8">
     <div class="flex items-center">
       <ng-icon name="bootstrapPersonFill" size="1.75rem" color="#FF66C4" />
       <a
