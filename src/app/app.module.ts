@@ -14,6 +14,7 @@ import { OnboardingComponent } from './pages/onboarding/onboarding.component';
 import { NameEditComponent } from './name-edit/name-edit.component';
 import { AddressEditComponent } from './address-edit/address-edit.component';
 import { NailDetailsComponent } from './nail-details/nail-details.component';
+import { SuggestedSubscriptionComponent } from './suggested-subscription/suggested-subscription.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { NailDetailsComponent } from './nail-details/nail-details.component';
     NameEditComponent,
     AddressEditComponent,
     NailDetailsComponent,
+    SuggestedSubscriptionComponent,
   ],
   imports: [
     BrowserModule,
