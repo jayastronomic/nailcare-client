@@ -1,7 +1,17 @@
 <div class="flex flex-col h-full w-full">
-  <form class="flex flex-col">
-    <input class="border p-2 self-start" placeholder="Email" />
-    <input class="border p-2 self-start" placeholder="Password" />
+  <form class="flex flex-col" (submit)="handleSubmit(registerService.user)">
+    <input
+      class="border p-2 self-start"
+      placeholder="Email"
+      name="email"
+      [(ngModel)]="registerService.user.email"
+    />
+    <input
+      class="border p-2 self-start"
+      placeholder="Password"
+      name="password"
+      [(ngModel)]="registerService.user.password"
+    />
     <input class="border p-2 self-start" placeholder="Re-Enter Password" />
     <div class="self-start">
       <button class="w-full self-start text-white bg-blue-500 p-2 rounded">
