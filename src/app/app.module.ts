@@ -16,6 +16,7 @@ import { AddressEditComponent } from './address-edit/address-edit.component';
 import { NailDetailsComponent } from './nail-details/nail-details.component';
 import { SuggestedSubscriptionComponent } from './suggested-subscription/suggested-subscription.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
     AddressEditComponent,
     NailDetailsComponent,
     SuggestedSubscriptionComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
