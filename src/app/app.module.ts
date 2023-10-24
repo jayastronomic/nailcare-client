@@ -9,6 +9,7 @@ import { NgIconsModule } from '@ng-icons/core';
 import { bootstrapList, bootstrapPersonFill } from '@ng-icons/bootstrap-icons';
 import { HomeBannerComponent } from './home-banner/home-banner.component';
 import { HomeComponent } from './pages/home/home.component';
+import { HomeSectionOneComponent } from './home-section-one/home-section-one.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { HomeComponent } from './pages/home/home.component';
     AppwrapperComponent,
     HomeBannerComponent,
     HomeComponent,
+    HomeSectionOneComponent,
   ],
   imports: [
     BrowserModule,
