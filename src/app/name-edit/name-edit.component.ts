@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-name-edit',
+  selector: 'name-edit',
   templateUrl: './name-edit.component.html',
-  styleUrls: ['./name-edit.component.css']
+  styleUrls: ['./name-edit.component.css'],
 })
-export class NameEditComponent {
-
-}
+export class NameEditComponent {}

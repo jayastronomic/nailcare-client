@@ -12,6 +12,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { HomeSectionOneComponent } from './home-section-one/home-section-one.component';
 import { OnboardingComponent } from './pages/onboarding/onboarding.component';
 import { NameEditComponent } from './name-edit/name-edit.component';
+import { AddressEditComponent } from './address-edit/address-edit.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { NameEditComponent } from './name-edit/name-edit.component';
     HomeSectionOneComponent,
     OnboardingComponent,
     NameEditComponent,
+    AddressEditComponent,
   ],
   imports: [
     BrowserModule,
