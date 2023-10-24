@@ -10,6 +10,7 @@ import { bootstrapList, bootstrapPersonFill } from '@ng-icons/bootstrap-icons';
 import { HomeBannerComponent } from './home-banner/home-banner.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HomeSectionOneComponent } from './home-section-one/home-section-one.component';
+import { OnboardingComponent } from './onboarding/onboarding.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { HomeSectionOneComponent } from './home-section-one/home-section-one.com
     HomeBannerComponent,
     HomeComponent,
     HomeSectionOneComponent,
+    OnboardingComponent,
   ],
   imports: [
     BrowserModule,
