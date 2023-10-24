@@ -15,6 +15,7 @@ import { NameEditComponent } from './name-edit/name-edit.component';
 import { AddressEditComponent } from './address-edit/address-edit.component';
 import { NailDetailsComponent } from './nail-details/nail-details.component';
 import { SuggestedSubscriptionComponent } from './suggested-subscription/suggested-subscription.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { SuggestedSubscriptionComponent } from './suggested-subscription/suggest
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     NgIconsModule.withIcons({ bootstrapList, bootstrapPersonFill }),
   ],
   providers: [],

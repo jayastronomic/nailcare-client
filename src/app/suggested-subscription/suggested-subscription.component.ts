@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import Coverage from '../interfaces/Coverage';
+import { CoverageService } from '../services/coverage/coverage.service';
 
 @Component({
   selector: 'app-suggested-subscription',
@@ -9,7 +10,11 @@ import Coverage from '../interfaces/Coverage';
 export class SuggestedSubscriptionComponent implements OnInit {
   coverages!: Coverage[];
 
+  constructor(private coverageService: CoverageService) {}
+
   ngOnInit(): void {
-    console.log(this.coverages);
+    this.coverageService.getCoverages().subscribe(({ data }) => {
+      this.coverages = data;
+    });
   }
 }
