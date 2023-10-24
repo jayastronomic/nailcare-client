@@ -10,7 +10,8 @@ import { bootstrapList, bootstrapPersonFill } from '@ng-icons/bootstrap-icons';
 import { HomeBannerComponent } from './home-banner/home-banner.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HomeSectionOneComponent } from './home-section-one/home-section-one.component';
-import { OnboardingComponent } from './onboarding/onboarding.component';
+import { OnboardingComponent } from './pages/onboarding/onboarding.component';
+import { NameEditComponent } from './name-edit/name-edit.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { OnboardingComponent } from './onboarding/onboarding.component';
     HomeComponent,
     HomeSectionOneComponent,
     OnboardingComponent,
+    NameEditComponent,
   ],
   imports: [
     BrowserModule,
