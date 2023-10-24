@@ -4,6 +4,7 @@ import { OnboardingComponent } from './pages/onboarding/onboarding.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NameEditComponent } from './name-edit/name-edit.component';
 import { AddressEditComponent } from './address-edit/address-edit.component';
+import { NailDetailsComponent } from './nail-details/nail-details.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
       {
         path: 'addressEdit',
         component: AddressEditComponent,
+      },
+      {
+        path: 'nailDetails',
+        component: NailDetailsComponent,
       },
     ],
   },

@@ -19,7 +19,10 @@
     required
   />
   <input class="border rounded self-start py-2 px-2" placeholder="ZIP Code" />
-  <button class="self-start border rounded bg-blue-400 text-white p-2">
+  <button
+    (click)="navigateToNailDetails()"
+    class="self-start border rounded bg-blue-400 text-white p-2"
+  >
     Continue
   </button>
 </div>

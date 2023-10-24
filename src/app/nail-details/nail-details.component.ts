@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-nail-details',
+  selector: 'nail-details',
   templateUrl: './nail-details.component.html',
-  styleUrls: ['./nail-details.component.css']
+  styleUrls: ['./nail-details.component.css'],
 })
-export class NailDetailsComponent {
-
-}
+export class NailDetailsComponent {}
