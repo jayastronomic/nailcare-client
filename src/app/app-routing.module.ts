@@ -5,6 +5,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { NameEditComponent } from './name-edit/name-edit.component';
 import { AddressEditComponent } from './address-edit/address-edit.component';
 import { NailDetailsComponent } from './nail-details/nail-details.component';
+import { SuggestedSubscriptionComponent } from './suggested-subscription/suggested-subscription.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
       {
         path: 'nailDetails',
         component: NailDetailsComponent,
+      },
+      {
+        path: 'suggestedSubscription',
+        component: SuggestedSubscriptionComponent,
       },
     ],
   },
