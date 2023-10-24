@@ -13,6 +13,7 @@ import { HomeSectionOneComponent } from './home-section-one/home-section-one.com
 import { OnboardingComponent } from './pages/onboarding/onboarding.component';
 import { NameEditComponent } from './name-edit/name-edit.component';
 import { AddressEditComponent } from './address-edit/address-edit.component';
+import { NailDetailsComponent } from './nail-details/nail-details.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { AddressEditComponent } from './address-edit/address-edit.component';
     OnboardingComponent,
     NameEditComponent,
     AddressEditComponent,
+    NailDetailsComponent,
   ],
   imports: [
     BrowserModule,
