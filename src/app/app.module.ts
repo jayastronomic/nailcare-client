@@ -17,6 +17,9 @@ import { NailDetailsComponent } from './nail-details/nail-details.component';
 import { SuggestedSubscriptionComponent } from './suggested-subscription/suggested-subscription.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
+import { OnboardingModule } from './pages/onboarding/onboarding.module';
+import { FormsModule } from '@angular/forms';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -26,18 +29,20 @@ import { LoginComponent } from './login/login.component';
     HomeBannerComponent,
     HomeComponent,
     HomeSectionOneComponent,
-    OnboardingComponent,
     NameEditComponent,
     AddressEditComponent,
     NailDetailsComponent,
     SuggestedSubscriptionComponent,
     LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     NgIconsModule.withIcons({ bootstrapList, bootstrapPersonFill }),
+    OnboardingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

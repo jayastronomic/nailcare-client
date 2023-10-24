@@ -2,23 +2,31 @@
   <input
     class="border rounded self-start py-2 px-2"
     placeholder="Street number and name*"
+    [(ngModel)]="onboardingService.profile.streetAddress"
     required
   />
   <input
     class="border rounded self-start py-2 px-2"
     placeholder="Apt./Unit #"
+    [(ngModel)]="onboardingService.profile.unitNumber"
   />
   <input
     class="border rounded self-start py-2 px-2"
     placeholder="City"
     required
+    [(ngModel)]="onboardingService.profile.city"
   />
   <input
     class="border rounded self-start py-2 px-2"
     placeholder="State"
     required
+    [(ngModel)]="onboardingService.profile.state"
   />
-  <input class="border rounded self-start py-2 px-2" placeholder="ZIP Code" />
+  <input
+    class="border rounded self-start py-2 px-2"
+    placeholder="ZIP Code"
+    [(ngModel)]="onboardingService.profile.zipCode"
+  />
   <button
     (click)="navigateToNailDetails()"
     class="self-start border rounded bg-blue-400 text-white p-2"

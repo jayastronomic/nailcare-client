@@ -17,5 +17,12 @@ export class OnboardingService {
     unitNumber: '',
   };
 
+  coverageId: string = '';
+  userId: string = '';
+
+  holdSubscriptionId(id: string) {
+    this.coverageId = id;
+  }
+
   constructor() {}
 }

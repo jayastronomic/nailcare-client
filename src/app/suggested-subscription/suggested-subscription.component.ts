@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import Coverage from '../interfaces/Coverage';
 import { CoverageService } from '../services/coverage/coverage.service';
 import { SubscriptionService } from '../services/subscription/subscription.service';
+import { OnboardingService } from '../services/onboarding/onboarding.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-suggested-subscription',
@@ -13,7 +15,9 @@ export class SuggestedSubscriptionComponent implements OnInit {
 
   constructor(
     private coverageService: CoverageService,
-    private subscriptionServcie: SubscriptionService
+    private onboardingService: OnboardingService,
+    private router: Router,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
@@ -23,8 +27,11 @@ export class SuggestedSubscriptionComponent implements OnInit {
   }
 
   holdSubscriptionId(id: string) {
-    this.subscriptionServcie.holdSubscriptionId(id);
+    this.onboardingService.holdSubscriptionId(id);
+    this.naviagteToSignUp();
   }
 
-  navigateToSignUpIfNotLoggedIn() {}
+  naviagteToSignUp() {
+    this.router.navigate(['../register'], { relativeTo: this.route });
+  }
 }
