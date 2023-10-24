@@ -7,6 +7,7 @@ import { AddressEditComponent } from './address-edit/address-edit.component';
 import { NailDetailsComponent } from './nail-details/nail-details.component';
 import { SuggestedSubscriptionComponent } from './suggested-subscription/suggested-subscription.component';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   {
@@ -36,6 +37,10 @@ const routes: Routes = [
       {
         path: 'suggestedSubscription',
         component: SuggestedSubscriptionComponent,
+      },
+      {
+        path: 'register',
+        component: RegisterComponent,
       },
     ],
   },
