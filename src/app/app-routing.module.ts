@@ -9,6 +9,7 @@ import { SuggestedSubscriptionComponent } from './suggested-subscription/suggest
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {
@@ -48,6 +49,11 @@ const routes: Routes = [
         component: ConfirmationComponent,
       },
     ],
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    children: [],
   },
 ];
 

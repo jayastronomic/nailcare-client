@@ -22,6 +22,7 @@ import { FormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { OverviewComponent } from './overview/overview.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     RegisterComponent,
     ConfirmationComponent,
     DashboardComponent,
+    OverviewComponent,
   ],
   imports: [
     BrowserModule,
