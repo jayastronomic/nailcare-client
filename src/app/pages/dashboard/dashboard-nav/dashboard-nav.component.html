@@ -1,0 +1,19 @@
+<div
+  class="fixed bg-white w-full bottom-0 flex items-center border-t shadow h-20 justify-around py-2 text-2xl"
+>
+  <button [routerLink]="['/dashboard/overview']">
+    <ng-icon name="bootstrapListUl" routerLinkActive="text-pink-400"></ng-icon>
+  </button>
+  <button [routerLink]="['/dashboard/insurance']">
+    <ng-icon
+      name="  bootstrapShieldCheck"
+      routerLinkActive="text-pink-400"
+    ></ng-icon>
+  </button>
+  <button [routerLink]="['/dashboard/claims']">
+    <ng-icon
+      name="bootstrapClipboard2Check"
+      routerLinkActive="text-pink-400"
+    ></ng-icon>
+  </button>
+</div>

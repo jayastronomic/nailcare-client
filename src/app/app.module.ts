@@ -6,7 +6,13 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AppwrapperComponent } from './appwrapper/appwrapper.component';
 import { NgIconsModule } from '@ng-icons/core';
-import { bootstrapList, bootstrapPersonFill } from '@ng-icons/bootstrap-icons';
+import {
+  bootstrapList,
+  bootstrapPersonFill,
+  bootstrapListUl,
+  bootstrapShieldCheck,
+  bootstrapClipboard2Check,
+} from '@ng-icons/bootstrap-icons';
 import { HomeBannerComponent } from './home-banner/home-banner.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HomeSectionOneComponent } from './home-section-one/home-section-one.component';
@@ -24,7 +30,8 @@ import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { OverviewComponent } from './overview/overview.component';
 import { DashboardModule } from './pages/dashboard/dashboard.module';
-import { DashboardNavComponent } from './dashboard-nav/dashboard-nav.component';
+import { DashboardNavComponent } from './pages/dashboard/dashboard-nav/dashboard-nav.component';
+import { InsuranceComponent } from './insurance/insurance.component';
 
 @NgModule({
   declarations: [
@@ -41,13 +48,19 @@ import { DashboardNavComponent } from './dashboard-nav/dashboard-nav.component';
     LoginComponent,
     RegisterComponent,
     ConfirmationComponent,
-    DashboardNavComponent,
+    InsuranceComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgIconsModule.withIcons({ bootstrapList, bootstrapPersonFill }),
+    NgIconsModule.withIcons({
+      bootstrapList,
+      bootstrapPersonFill,
+      bootstrapListUl,
+      bootstrapShieldCheck,
+      bootstrapClipboard2Check,
+    }),
     OnboardingModule,
     DashboardModule,
     FormsModule,
