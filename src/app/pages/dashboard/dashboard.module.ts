@@ -12,9 +12,16 @@ import {
   bootstrapShieldCheck,
   bootstrapClipboard2Check,
 } from '@ng-icons/bootstrap-icons';
+import { InsuranceComponent } from './insurance/insurance.component';
+import { DashboardService } from 'src/app/services/dashboard/dashboard.service';
 
 @NgModule({
-  declarations: [DashboardComponent, OverviewComponent, DashboardNavComponent],
+  declarations: [
+    DashboardComponent,
+    OverviewComponent,
+    DashboardNavComponent,
+    InsuranceComponent,
+  ],
   imports: [
     CommonModule,
     RouterModule,
@@ -26,5 +33,6 @@ import {
       bootstrapClipboard2Check,
     }),
   ],
+  providers: [DashboardService],
 })
 export class DashboardModule {}

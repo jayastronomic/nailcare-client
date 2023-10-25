@@ -31,7 +31,9 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { OverviewComponent } from './overview/overview.component';
 import { DashboardModule } from './pages/dashboard/dashboard.module';
 import { DashboardNavComponent } from './pages/dashboard/dashboard-nav/dashboard-nav.component';
-import { InsuranceComponent } from './insurance/insurance.component';
+import { InsuranceComponent } from './pages/dashboard/insurance/insurance.component';
+import { AuthService } from './services/auth/auth.service';
+import { ClaimsComponent } from './claims/claims.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,7 @@ import { InsuranceComponent } from './insurance/insurance.component';
     LoginComponent,
     RegisterComponent,
     ConfirmationComponent,
-    InsuranceComponent,
+    ClaimsComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,7 +67,7 @@ import { InsuranceComponent } from './insurance/insurance.component';
     DashboardModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

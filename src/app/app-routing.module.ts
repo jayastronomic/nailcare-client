@@ -11,6 +11,7 @@ import { RegisterComponent } from './register/register.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { OverviewComponent } from './overview/overview.component';
+import { InsuranceComponent } from './pages/dashboard/insurance/insurance.component';
 
 const routes: Routes = [
   {
@@ -58,6 +59,10 @@ const routes: Routes = [
       {
         path: 'overview',
         component: OverviewComponent,
+      },
+      {
+        path: 'insurance',
+        component: InsuranceComponent,
       },
     ],
   },
