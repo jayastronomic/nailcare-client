@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { OverviewComponent } from './overview/overview.component';
 
 const routes: Routes = [
   {
@@ -53,7 +54,12 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
-    children: [],
+    children: [
+      {
+        path: 'overview',
+        component: OverviewComponent,
+      },
+    ],
   },
 ];
 
