@@ -21,6 +21,7 @@ import { OnboardingModule } from './pages/onboarding/onboarding.module';
 import { FormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { ConfirmationComponent } from './confirmation/confirmation.component';
     LoginComponent,
     RegisterComponent,
     ConfirmationComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,

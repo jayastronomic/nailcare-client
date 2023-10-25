@@ -8,6 +8,7 @@ import { NailDetailsComponent } from './nail-details/nail-details.component';
 import { SuggestedSubscriptionComponent } from './suggested-subscription/suggested-subscription.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { ConfirmationComponent } from './confirmation/confirmation.component';
 
 const routes: Routes = [
   {
@@ -41,6 +42,10 @@ const routes: Routes = [
       {
         path: 'register',
         component: RegisterComponent,
+      },
+      {
+        path: 'confirmation',
+        component: ConfirmationComponent,
       },
     ],
   },
