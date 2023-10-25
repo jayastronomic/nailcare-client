@@ -9,7 +9,7 @@ import { SuggestedSubscriptionComponent } from './suggested-subscription/suggest
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { OverviewComponent } from './overview/overview.component';
 
 const routes: Routes = [

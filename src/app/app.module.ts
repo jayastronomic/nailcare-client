@@ -21,8 +21,10 @@ import { OnboardingModule } from './pages/onboarding/onboarding.module';
 import { FormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { OverviewComponent } from './overview/overview.component';
+import { DashboardModule } from './pages/dashboard/dashboard.module';
+import { DashboardNavComponent } from './dashboard-nav/dashboard-nav.component';
 
 @NgModule({
   declarations: [
@@ -39,8 +41,7 @@ import { OverviewComponent } from './overview/overview.component';
     LoginComponent,
     RegisterComponent,
     ConfirmationComponent,
-    DashboardComponent,
-    OverviewComponent,
+    DashboardNavComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,6 +49,7 @@ import { OverviewComponent } from './overview/overview.component';
     HttpClientModule,
     NgIconsModule.withIcons({ bootstrapList, bootstrapPersonFill }),
     OnboardingModule,
+    DashboardModule,
     FormsModule,
   ],
   providers: [],
