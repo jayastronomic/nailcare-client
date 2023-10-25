@@ -20,6 +20,7 @@ import { LoginComponent } from './login/login.component';
 import { OnboardingModule } from './pages/onboarding/onboarding.module';
 import { FormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
+import { ConfirmationComponent } from './confirmation/confirmation.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { RegisterComponent } from './register/register.component';
     SuggestedSubscriptionComponent,
     LoginComponent,
     RegisterComponent,
+    ConfirmationComponent,
   ],
   imports: [
     BrowserModule,
