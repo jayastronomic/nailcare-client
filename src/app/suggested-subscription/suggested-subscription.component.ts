@@ -15,7 +15,7 @@ export class SuggestedSubscriptionComponent implements OnInit {
 
   constructor(
     private coverageService: CoverageService,
-    private onboardingService: OnboardingService,
+    public onboardingService: OnboardingService,
     private router: Router,
     private route: ActivatedRoute
   ) {}

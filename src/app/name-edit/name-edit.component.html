@@ -1,30 +1,65 @@
-<div class="flex flex-col h-full">
-  <input
-    class="border rounded self-start py-2 px-2"
-    placeholder="First Name"
-    [(ngModel)]="onboardingService.profile.firstName"
-    required
-  />
-  <input
-    class="border rounded self-start py-2 px-2"
-    placeholder="MI"
-    [(ngModel)]="onboardingService.profile.middleInital"
-  />
-  <input
-    class="border rounded self-start py-2 px-2"
-    placeholder="Last Name"
-    required
-    [(ngModel)]="onboardingService.profile.lastName"
-  />
-  <input
-    type="date"
-    class="border rounded self-start py-2 px-2"
-    [(ngModel)]="onboardingService.profile.birthdate"
-  />
-  <button
-    (click)="navigateToAddressEdit()"
-    class="self-start border rounded bg-blue-400 text-white p-2"
-  >
-    Continue
-  </button>
+<div class="flex flex-col h-full p-8">
+  <h1 class="font-bold zilla text-6xl text-gray-700">Let's talk about you!</h1>
+  <div class="py-6 text-4xl font-thin zilla text-gray-500">
+    Start your nail onboarding and see how much you can save.
+  </div>
+  <div class="text-xs text-gray-600">* Indicates required field</div>
+  <div class="flex flex-col w-full space-y-6">
+    <div class="zilla font-bold text-gray-700 text-2xl">Name</div>
+    <div class="flex space-x-6">
+      <input
+        class="border rounded self-start p-4 px-2 flex-1 focus:outline-none focus:ring-2 focus:border-2 focus:border-blue-500"
+        placeholder="First Name*"
+        [(ngModel)]="onboardingService.profile.firstName"
+        required
+        #firstName="ngModel"
+        [ngClass]="{
+          'border-red-600 ring-2 ring-red-200':
+            firstName.invalid && (firstName.dirty || firstName.touched)
+        }"
+      />
+
+      <input
+        class="border rounded self-start p-4 w-20 focus:outline-none focus:ring-2 focus:border-2 focus:border-blue-500"
+        placeholder="MI"
+        [(ngModel)]="onboardingService.profile.middleInital"
+      />
+    </div>
+    <input
+      class="border rounded self-start p-4 w-full focus:outline-none focus:ring-2 focus:border-2 focus:border-blue-500"
+      placeholder="Last Name*"
+      required
+      [(ngModel)]="onboardingService.profile.lastName"
+      #lastName="ngModel"
+      [ngClass]="{
+        'border-red-600 ring-2 ring-red-200':
+          lastName.invalid && (lastName.dirty || lastName.touched)
+      }"
+    />
+    <div class="flex flex-col space-y-4">
+      <div class="zilla font-bold text-gray-700 text-2xl">Birthdate*</div>
+      <input
+        required
+        #birthdate="ngModel"
+        type="date"
+        class="border rounded self-start p-4 w-full focus:outline-none focus:ring-2 focus:border-2 focus:border-blue-500"
+        [(ngModel)]="onboardingService.profile.birthdate"
+        [ngClass]="{
+          'border-red-600 ring-2 ring-red-200':
+            birthdate.invalid && (birthdate.dirty || birthdate.touched)
+        }"
+      />
+    </div>
+    <button
+      [ngClass]="{
+        'bg-blue-200 hover:bg-blue-200 cursor-not-allowed':
+          firstName.invalid || lastName.invalid || birthdate.invalid
+      }"
+      [disabled]="firstName.invalid || lastName.invalid || birthdate.invalid"
+      (click)="navigateToAddressEdit()"
+      class="zilla font-bold border rounded bg-blue-400 text-white p-2 w-full py-4 text-2xl hover:bg-blue-500 transition"
+    >
+      Continue
+    </button>
+  </div>
 </div>

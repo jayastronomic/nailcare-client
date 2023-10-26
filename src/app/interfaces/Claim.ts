@@ -3,7 +3,7 @@ export default interface Claim {
   claimDate: string;
   description: string;
   affectedNails: string;
-  status?: string;
+  claimStatus?: string;
   claimAmount: number;
   resolutionDate?: string;
   reviewDate?: string;

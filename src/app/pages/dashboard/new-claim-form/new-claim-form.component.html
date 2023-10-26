@@ -4,137 +4,154 @@
 >
   <form
     (submit)="handleSubmit()"
-    class="h-full w-full flex flex-col bg-gray-100 rounded-2xl max-w-[60rem] p-8 overflow-auto"
+    class="relative h-full w-full flex flex-col bg-[#f5fafb] rounded-2xl max-w-[60rem] overflow-auto"
   >
-    <div class="flex justify-end">
-      <button (click)="callToggleForm()">close</button>
-    </div>
-    <div class="text-2xl font-bold">New Claim</div>
-    <div class="flex flex-col">
-      <label class="self-start">Date of Incedent</label>
-      <input
-        class="rounded self-start border-gray-300 border"
-        type="date"
-        name="claimDate"
-        [(ngModel)]="newClaim.claimDate"
-      />
-    </div>
-    <div class="flex flex-col">
-      <label class="self-start">Description of Accident</label>
-      <textarea
-        class="rounded self-start resize-none h-20 border-gray-300 border"
-        type="text"
-        name="description"
-        [(ngModel)]="newClaim.description"
-      ></textarea>
-    </div>
-    <div class="grid grid-cols-2">
-      <div class="flex justify-between w-32">
-        <label>Left Pinky</label>
-        <input
-          name="leftPinky"
-          value="leftPinky"
-          type="checkbox"
-          (change)="addFinger('leftPinky')"
-        />
-      </div>
-      <div class="flex justify-between w-32">
-        <label>Left Ring</label>
-        <input
-          name="leftRing"
-          value="leftRing"
-          type="checkbox"
-          (change)="addFinger('leftRing')"
-        />
-      </div>
-      <div class="flex justify-between w-32">
-        <label>Left Middle</label>
-        <input
-          name="leftMiddle"
-          value="leftMiddle"
-          type="checkbox"
-          (change)="addFinger('leftMiddle')"
-        />
-      </div>
-      <div class="flex justify-between w-32">
-        <label>Left Pointer</label>
-        <input
-          name="leftPointer"
-          value="leftPointer"
-          type="checkbox"
-          (change)="addFinger('leftPointer')"
-        />
-      </div>
-      <div class="flex justify-between w-32">
-        <label>Left Thumb</label>
-        <input
-          name="leftThumb"
-          value="leftThumb"
-          type="checkbox"
-          (change)="addFinger('leftThumb')"
-        />
-      </div>
-      <div class="flex justify-between w-32">
-        <label>Right Pinky</label>
-        <input
-          name="rightPinky"
-          value="rightPinky"
-          type="checkbox"
-          (change)="addFinger('rightPinky')"
-        />
-      </div>
-      <div class="flex justify-between w-32">
-        <label>Right Ring</label>
-        <input
-          name="rightRing"
-          value="rightRing"
-          type="checkbox"
-          (change)="addFinger('rightRing')"
-        />
-      </div>
-      <div class="flex justify-between w-32">
-        <label>Right Middle</label>
-        <input
-          name="rightMiddle"
-          value="rightMiddle"
-          type="checkbox"
-          (change)="addFinger('rightMiddle')"
-        />
-      </div>
-      <div class="flex justify-between w-32">
-        <label>Right Pointer</label>
-        <input
-          name="rightPointer"
-          value="rightPointer"
-          type="checkbox"
-          (change)="addFinger('rightPointer')"
-        />
-      </div>
-      <div class="flex justify-between w-32">
-        <label>Right Thumb</label>
-        <input
-          name="rightThumb"
-          value="rightThumb"
-          type="checkbox"
-          (change)="addFinger('rightThumb')"
-        />
-      </div>
-    </div>
-    <div class="flex flex-col self-start">
-      <label class="self-start">Claim Amount:</label>
-      <input
-        class="border rounded border-gray-300"
-        type="number"
-        [(ngModel)]="newClaim.claimAmount"
-        name="claimAmount"
-      />
-    </div>
-    <div class="mt-20">
+    <div class="sticky top-0 left-0 flex bg-white w-full p-2 shadow">
       <button
-        class="bg-blue-400 text-white font-bold text-sm py-4 w-full rounded"
+        class="bg-white w-8 h-8 rounded-full hover:bg-blue-400 hover:text-white transition"
+        (click)="callToggleForm()"
       >
-        Submit Claim
+        <ng-icon class="" name="bootstrapXLg" />
       </button>
+    </div>
+    <div class="flex flex-col px-8">
+      <div class="text-2xl zilla">New Claim</div>
+      <div class="flex flex-col">
+        <label class="self-start zilla text-[#2D95E5] font-bold"
+          >Date of Incedent</label
+        >
+        <input
+          class="rounded self-start border-gray-300 border p-4 w-full text-sm"
+          type="date"
+          name="claimDate"
+          [(ngModel)]="newClaim.claimDate"
+        />
+      </div>
+      <div class="flex flex-col pt-4">
+        <label class="self-start zilla text-[#2D95E5] font-bold"
+          >Description of Accident</label
+        >
+        <textarea
+          class="rounded self-start resize-none h-48 border-gray-300 border w-full p-2 text-sm"
+          type="text"
+          name="description"
+          [(ngModel)]="newClaim.description"
+          placeholder="Descrbe what happend...."
+        ></textarea>
+      </div>
+      <div class="self-start zilla font-bold text-gray-700 pt-8">
+        Damaged Nails
+      </div>
+      <div class="grid grid-cols-2 pt-4 zilla font-bold text-[#2D95E5]">
+        <div class="flex justify-between w-32">
+          <label>Left Pinky</label>
+          <input
+            name="leftPinky"
+            value="leftPinky"
+            type="checkbox"
+            (change)="addFinger('leftPinky')"
+          />
+        </div>
+        <div class="flex justify-between w-32">
+          <label>Left Ring</label>
+          <input
+            name="leftRing"
+            value="leftRing"
+            type="checkbox"
+            (change)="addFinger('leftRing')"
+          />
+        </div>
+        <div class="flex justify-between w-32">
+          <label>Left Middle</label>
+          <input
+            name="leftMiddle"
+            value="leftMiddle"
+            type="checkbox"
+            (change)="addFinger('leftMiddle')"
+          />
+        </div>
+        <div class="flex justify-between w-32">
+          <label>Left Pointer</label>
+          <input
+            name="leftPointer"
+            value="leftPointer"
+            type="checkbox"
+            (change)="addFinger('leftPointer')"
+          />
+        </div>
+        <div class="flex justify-between w-32">
+          <label>Left Thumb</label>
+          <input
+            name="leftThumb"
+            value="leftThumb"
+            type="checkbox"
+            (change)="addFinger('leftThumb')"
+          />
+        </div>
+        <div class="flex justify-between w-32">
+          <label>Right Pinky</label>
+          <input
+            name="rightPinky"
+            value="rightPinky"
+            type="checkbox"
+            (change)="addFinger('rightPinky')"
+          />
+        </div>
+        <div class="flex justify-between w-32">
+          <label>Right Ring</label>
+          <input
+            name="rightRing"
+            value="rightRing"
+            type="checkbox"
+            (change)="addFinger('rightRing')"
+          />
+        </div>
+        <div class="flex justify-between w-32">
+          <label>Right Middle</label>
+          <input
+            name="rightMiddle"
+            value="rightMiddle"
+            type="checkbox"
+            (change)="addFinger('rightMiddle')"
+          />
+        </div>
+        <div class="flex justify-between w-32">
+          <label>Right Pointer</label>
+          <input
+            name="rightPointer"
+            value="rightPointer"
+            type="checkbox"
+            (change)="addFinger('rightPointer')"
+          />
+        </div>
+        <div class="flex justify-between w-32">
+          <label>Right Thumb</label>
+          <input
+            name="rightThumb"
+            value="rightThumb"
+            type="checkbox"
+            (change)="addFinger('rightThumb')"
+          />
+        </div>
+      </div>
+      <div class="flex flex-col pt-4 w-full">
+        <label class="self-start text-[#2D95E5] zilla font-bold"
+          >Claim Amount:</label
+        >
+        <input
+          class="border rounded border-gray-300 w-full p-2"
+          type="number"
+          [(ngModel)]="newClaim.claimAmount"
+          name="claimAmount"
+        />
+      </div>
+      <div class="mt-20">
+        <button
+          class="bg-blue-400 text-white font-bold text-sm py-4 w-full rounded"
+        >
+          Submit Claim
+        </button>
+      </div>
     </div>
   </form>
 </button>

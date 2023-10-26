@@ -1,14 +1,44 @@
-<div class="h-full flex justify-center items-center">
-  <div class="flex space-x-4">
-    <div class="border rounded" *ngFor="let coverage of coverages">
-      <div>{{ coverage.planName }}</div>
-      <div>
-        <button
-          (click)="holdSubscriptionId(coverage.id)"
-          class="bg-blue-400 text-white p-1 rounded text-sm"
+<div class="relative h-full w-full flex flex-col">
+  <div class="h-1/2 bg-[#2d95e5]"></div>
+  <div class="h-1/2"></div>
+  <div class="absolute h-full w-full flex justify-center items-center">
+    <div class="h-full flex justify-center items-center">
+      <div class="flex space-x-4">
+        <div
+          class="relative rounded h-[20rem] bg-white w-[12rem] bg-opacity-90 flex flex-col justify-around shadow-lg p-4"
+          *ngFor="let coverage of coverages"
         >
-          Subscribe
-        </button>
+          <div
+            class="absolute text-center top-0 left-0 text-xs bg-green-500 text-white p-1 rounded-t w-full opacity-80"
+            *ngIf="
+              coverage.planName.startsWith(
+                onboardingService.suggestedSubscription
+              )
+            "
+          >
+            Suggested
+          </div>
+          <div class="text-center zilla font-thin text-xl">
+            {{ coverage.planName }}
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="text-center text-3xl text-blue-500">
+              ${{ coverage.monthlyFee }}
+            </div>
+            <div class="text-[0.5rem] text-blue-500">PER MONTH</div>
+          </div>
+          <div class="text-xs text-blue-500 text-center">
+            {{ coverage.planDescription }}
+          </div>
+          <div>
+            <button
+              (click)="holdSubscriptionId(coverage.id)"
+              class="bg-blue-400 text-white py-2 rounded-full w-full text-sm font-semibold hover:bg-blue-500 transition hover:shadow-xl hover:shadow-blue-300 hover:scale-105"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>

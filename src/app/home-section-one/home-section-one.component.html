@@ -1,12 +1,78 @@
-<div class="flex flex-col items-center p-4">
-  <div class="text-lg">Welcome to NailSurent<span class="text-xs">®</span></div>
-  <div class="font-bold text-2xl mt-4">Your nail coverage starts here</div>
-  <div class="mt-8">
+<div class="flex flex-col items-center p-8 bg-[#f5fafb] flex-1 h-full">
+  <div class="text-lg zilla text-gray-700">
+    Welcome to NailSurent<span class="text-xs">®</span>
+  </div>
+  <div class="font-bold text-2xl mt-4 zilla text-gray-700">
+    Your nail coverage starts here
+  </div>
+  <!-- <div class="mt-8">
     <button
       routerLink="onboarding/nameEdit"
       class="text-xl bg-purple-600 text-white font-bold p-8 rounded-2xl shadow-purple-600 shadow hover:shadow-lg hover:shadow-purple-700 transition"
     >
       <a> Get Covered</a>
+    </button>
+  </div> -->
+  <div class="flex flex-col w-full space-y-6">
+    <div class="font-bold text-gray-700 zilla text-center py-4">
+      Select a set to insure
+    </div>
+    <button
+      routerLink="onboarding/nameEdit"
+      class="relative flex items-center border rounded shadow-md shadow-blue-100 hover:bg-opacity-30 p-2 border-blue-200 hover:bg-blue-100 bg-white hover:shadow-none transition"
+    >
+      <div class="overflow-hidden">
+        <img
+          class="object-cover"
+          alt="#"
+          src="../../assets/acrylicsticker.svg"
+        />
+      </div>
+      <div class="flex flex-col">
+        <div class="self-start zilla font-bold text-gray-700 text-lg">
+          Acrylic Set
+        </div>
+        <div class="self-start zilla text-gray-700">
+          Full set saves you 20$ per month
+        </div>
+      </div>
+      <div
+        class="absolute top-4 right-4 bg-blue-400 p-1 rounded text-xs text-white font-bold"
+      >
+        POPULAR
+      </div>
+    </button>
+    <button
+      class="relative flex items-center border rounded shadow-md shadow-blue-100 hover:bg-opacity-30 p-2 border-blue-200 hover:bg-blue-100 bg-white hover:shadow-none transition"
+    >
+      <div class="overflow-hidden">
+        <img class="object-cover" alt="#" src="../../assets/gelsticker.svg" />
+      </div>
+      <div class="flex flex-col">
+        <div class="self-start zilla font-bold text-gray-700 text-lg">
+          Gel Set
+        </div>
+        <div class="self-start zilla text-gray-700">
+          Average savings of over $650
+        </div>
+      </div>
+      <div
+        class="absolute top-4 right-4 bg-pink-300 p-1 rounded text-xs text-white font-bold"
+      >
+        SAVINGS!
+      </div>
+    </button>
+  </div>
+  <div class="flex flex-col items-center space-y-4 mt-8">
+    <button
+      class="zilla font-thin border rounded py-2 w-48 border-blue-300 text-blue-300"
+    >
+      Find an agent
+    </button>
+    <button
+      class="zilla font-thin border rounded py-2 px-2 w-56 border-blue-300 text-blue-300"
+    >
+      Continue a previous qoute
     </button>
   </div>
 </div>

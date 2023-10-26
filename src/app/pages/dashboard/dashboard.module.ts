@@ -11,6 +11,7 @@ import {
   bootstrapListUl,
   bootstrapShieldCheck,
   bootstrapClipboard2Check,
+  bootstrapXLg,
 } from '@ng-icons/bootstrap-icons';
 import { InsuranceComponent } from './insurance/insurance.component';
 import { DashboardService } from 'src/app/services/dashboard/dashboard.service';
@@ -38,6 +39,7 @@ import { FormsModule } from '@angular/forms';
       bootstrapListUl,
       bootstrapShieldCheck,
       bootstrapClipboard2Check,
+      bootstrapXLg,
     }),
     FormsModule,
   ],

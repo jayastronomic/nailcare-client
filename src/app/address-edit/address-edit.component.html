@@ -1,36 +1,80 @@
-<div class="flex flex-col h-full">
-  <input
-    class="border rounded self-start py-2 px-2"
-    placeholder="Street number and name*"
-    [(ngModel)]="onboardingService.profile.streetAddress"
-    required
-  />
-  <input
-    class="border rounded self-start py-2 px-2"
-    placeholder="Apt./Unit #"
-    [(ngModel)]="onboardingService.profile.unitNumber"
-  />
-  <input
-    class="border rounded self-start py-2 px-2"
-    placeholder="City"
-    required
-    [(ngModel)]="onboardingService.profile.city"
-  />
-  <input
-    class="border rounded self-start py-2 px-2"
-    placeholder="State"
-    required
-    [(ngModel)]="onboardingService.profile.state"
-  />
-  <input
-    class="border rounded self-start py-2 px-2"
-    placeholder="ZIP Code"
-    [(ngModel)]="onboardingService.profile.zipCode"
-  />
-  <button
-    (click)="navigateToNailDetails()"
-    class="self-start border rounded bg-blue-400 text-white p-2"
-  >
-    Continue
-  </button>
+<div class="flex flex-col h-full p-8">
+  <h1 class="font-bold zilla text-6xl text-gray-700">Glad to meet you!</h1>
+  <div class="py-6 text-4xl font-thin zilla text-gray-500">
+    11,555 people in Texas bought nail insurance in the last 30 days
+  </div>
+  <div class="flex flex-col h-full space-y-6 w-full">
+    <div class="zilla font-bold text-gray-700 text-2xl">Mailing Address</div>
+    <input
+      class="border rounded self-start p-4 px-2 focus:outline-none focus:ring-2 focus:border-2 focus:border-blue-500 w-full"
+      placeholder="Street Address*"
+      [(ngModel)]="onboardingService.profile.streetAddress"
+      required
+      #streetAddress="ngModel"
+      [ngClass]="{
+        'border-red-600 ring-2 ring-red-200':
+          streetAddress.invalid &&
+          (streetAddress.dirty || streetAddress.touched)
+      }"
+    />
+    <input
+      class="border rounded self-start p-4 px-2 focus:outline-none focus:ring-2 focus:border-2 focus:border-blue-500 w-full"
+      placeholder="Unit/APT. #"
+      [(ngModel)]="onboardingService.profile.unitNumber"
+      #unitNumber="ngModel"
+    />
+    <input
+      class="border rounded self-start p-4 px-2 focus:outline-none focus:ring-2 focus:border-2 focus:border-blue-500 w-full"
+      placeholder="City*"
+      [(ngModel)]="onboardingService.profile.city"
+      required
+      #city="ngModel"
+      [ngClass]="{
+        'border-red-600 ring-2 ring-red-200':
+          city.invalid && (city.dirty || city.touched)
+      }"
+    />
+    <input
+      class="border rounded self-start p-4 px-2 focus:outline-none focus:ring-2 focus:border-2 focus:border-blue-500 w-full"
+      placeholder="State*"
+      [(ngModel)]="onboardingService.profile.state"
+      required
+      #state="ngModel"
+      [ngClass]="{
+        'border-red-600 ring-2 ring-red-200':
+          state.invalid && (state.dirty || state.touched)
+      }"
+    />
+    <input
+      class="border rounded self-start p-4 px-2 focus:outline-none focus:ring-2 focus:border-2 focus:border-blue-500 w-full"
+      placeholder="ZIP Code*"
+      [(ngModel)]="onboardingService.profile.zipCode"
+      required
+      #zipCode="ngModel"
+      [ngClass]="{
+        'border-red-600 ring-2 ring-red-200':
+          zipCode.invalid && (zipCode.dirty || zipCode.touched)
+      }"
+    />
+
+    <button
+      [ngClass]="{
+        'bg-blue-200 hover:bg-blue-200 cursor-not-allowed':
+          streetAddress.invalid ||
+          city.invalid ||
+          state.invalid ||
+          zipCode.invalid
+      }"
+      [disabled]="
+        streetAddress.invalid ||
+        city.invalid ||
+        state.invalid ||
+        zipCode.invalid
+      "
+      (click)="navigateToNailDetails()"
+      class="zilla font-bold self-start border rounded bg-blue-400 text-white p-2 w-full py-4 text-2xl hover:bg-blue-500 transition"
+    >
+      Continue
+    </button>
+  </div>
 </div>

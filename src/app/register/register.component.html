@@ -1,19 +1,34 @@
-<div class="flex flex-col h-full w-full">
-  <form class="flex flex-col" (submit)="handleSubmit(registerService.user)">
+<div class="h-full flex flex-col items-center p-20 bg-[#f5fafb]">
+  <div class="text-gray-700 font-bold zilla text-5xl">
+    Let's get you registered!
+  </div>
+  <div class="text-gray-600 zilla text-2xl pt-4">
+    Create an account to start using your subscription today
+  </div>
+  <form
+    class="flex flex-col bg-white rounded-xl p-6 w-full shadow-md space-y-4 mt-16"
+    (submit)="handleSubmit(registerService.user)"
+  >
+    <div class="zilla text-gray-800 text-2xl font-bold">Sign up</div>
     <input
-      class="border p-2 self-start"
+      class="border p-2 self-start w-full"
       placeholder="Email"
       name="email"
       [(ngModel)]="registerService.user.email"
     />
     <input
-      class="border p-2 self-start"
+      class="border p-2 self-start w-full"
       placeholder="Password"
       name="password"
+      type="password"
       [(ngModel)]="registerService.user.password"
     />
-    <input class="border p-2 self-start" placeholder="Re-Enter Password" />
-    <div class="self-start">
+    <input
+      class="border p-2 self-start w-full"
+      placeholder="Re-Enter Password"
+      type="password"
+    />
+    <div class="w-full">
       <button class="w-full self-start text-white bg-blue-500 p-2 rounded">
         Create Account
       </button>
