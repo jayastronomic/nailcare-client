@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import APIResponse from 'src/app/interfaces/APIresponse';
 import Coverage from 'src/app/interfaces/Coverage';
 import Profile from 'src/app/interfaces/Profile';
+import { SuggestedSubscription } from 'src/app/nail-details/nail-details.component';
 
 @Injectable({
   providedIn: 'root',
@@ -23,6 +24,7 @@ export class OnboardingService {
   };
   coverageId: string = '';
   userId: string = '';
+  suggestedSubscription: SuggestedSubscription = 'BASIC';
 
   constructor(private http: HttpClient) {}
 

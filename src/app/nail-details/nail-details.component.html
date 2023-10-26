@@ -1,14 +1,21 @@
-<div class="flex flex-col">
+<div class="flex flex-col h-full space-y-8 p-8">
+  <h1 class="zilla text-gray-700 text-4xl font-bold">
+    Let's get to know about your nail maintenance
+  </h1>
   <div class="flex flex-col">
-    <p>How often do you get acrylic/gel finger nails?</p>
+    <p class="pb-2 zilla font-bold text-gray-500 text-2xl">
+      How often do you get acrylic/gel finger nails?
+    </p>
     <div class="flex">
       <input
         type="radio"
         id="nailsDoneWeekly"
         name="nailsDoneFrequency"
         value="weekly"
+        class="mr-2"
+        [(ngModel)]="answers.nailsDoneFrequency"
       />
-      <label for="nailsDoneWeekly" class="mr-6">Weekly</label>
+      <label class="zilla text-gray-800" for="nailsDoneWeekly">Weekly</label>
     </div>
     <div class="flex">
       <input
@@ -16,8 +23,11 @@
         id="nailsDoneMonthly"
         name="nailsDoneFrequency"
         value="monthly"
+        class="mr-2"
+        [(ngModel)]="answers.nailsDoneFrequency"
+        (change)="log()"
       />
-      <label for="nailsDoneMonthly" class="mr-6">Monthly</label>
+      <label class="zilla text-gray-800" for="nailsDoneMonthly">Monthly</label>
     </div>
     <div class="flex">
       <input
@@ -25,12 +35,17 @@
         id="nailsDoneLessFrequently"
         name="nailsDoneFrequency"
         value="lessFrequently"
+        class="mr-2"
+        [(ngModel)]="answers.nailsDoneFrequency"
+        (change)="log()"
       />
-      <label for="nailsDoneLessFrequently">Less frequently</label>
+      <label class="zilla text-gray-800" for="nailsDoneLessFrequently"
+        >Less frequently</label
+      >
     </div>
   </div>
   <div class="flex flex-col">
-    <p>
+    <p class="pb-2 zilla font-bold text-gray-500 text-2xl">
       Approximately, how much do you spend on finger nail maintenance per month?
     </p>
     <div class="flex">
@@ -40,8 +55,9 @@
         name="nailMaintenanceExpense"
         value="0"
         class="mr-2"
+        [(ngModel)]="answers.nailMaintenanceExpense"
       />
-      <label for="nailExpense0" class="mr-6">$0</label>
+      <label class="zilla text-gray-800" for="nailExpense0">$0</label>
     </div>
     <div class="flex">
       <input
@@ -50,8 +66,11 @@
         name="nailMaintenanceExpense"
         value="25-50"
         class="mr-2"
+        [(ngModel)]="answers.nailMaintenanceExpense"
       />
-      <label for="nailExpense25-50" class="mr-6">$25 - $50</label>
+      <label class="zilla text-gray-800" for="nailExpense25-50"
+        >$25 - $50</label
+      >
     </div>
     <div class="flex">
       <input
@@ -60,8 +79,11 @@
         name="nailMaintenanceExpense"
         value="51-100"
         class="mr-2"
+        [(ngModel)]="answers.nailMaintenanceExpense"
       />
-      <label for="nailExpense51-100" class="mr-6">$51 - $100</label>
+      <label class="zilla text-gray-800" for="nailExpense51-100"
+        >$51 - $100</label
+      >
     </div>
     <div class="flex">
       <input
@@ -70,23 +92,44 @@
         name="nailMaintenanceExpense"
         value="100plus"
         class="mr-2"
+        [(ngModel)]="answers.nailMaintenanceExpense"
       />
-      <label for="nailExpense100plus">Over $100</label>
+      <label class="zilla text-gray-800" for="nailExpense100plus"
+        >Over $100</label
+      >
     </div>
   </div>
   <div class="flex flex-col">
-    <p>Have you ever experienced manicure damage?</p>
+    <p class="pb-2 zilla font-bold text-gray-500 text-2xl">
+      Have you ever experienced manicure damage?
+    </p>
     <div class="flex">
-      <input type="radio" id="nailDamageYes" name="nailDamage" value="true" />
-      <label for="nailDamageYes" class="mr-6">Yes</label>
+      <input
+        type="radio"
+        id="nailDamageYes"
+        name="nailDamage"
+        value="true"
+        [(ngModel)]="answers.nailDamage"
+        class="mr-2"
+      />
+      <label class="zilla text-gray-800" for="nailDamageYes">Yes</label>
     </div>
     <div class="flex">
-      <input type="radio" id="nailDamageNo" name="nailDamage" value="false" />
-      <label for="nailDamageNo">No</label>
+      <input
+        type="radio"
+        id="nailDamageNo"
+        name="nailDamage"
+        value="false"
+        [(ngModel)]="answers.nailDamage"
+        class="mr-2"
+      />
+      <label class="zilla text-gray-800" for="nailDamageNo">No</label>
     </div>
   </div>
   <div class="flex flex-col">
-    <p>How often do you experience finger nail breakage in a year?</p>
+    <p class="pb-2 zilla font-bold text-gray-500 text-2xl">
+      How often do you experience finger nail breakage in a year?
+    </p>
     <div class="flex">
       <input
         type="radio"
@@ -94,8 +137,9 @@
         name="nailBreakageFrequency"
         value="rarely"
         class="mr-2"
+        [(ngModel)]="answers.nailBreakageFrequency"
       />
-      <label for="nailBreakRarely" class="mr-6"
+      <label class="zilla text-gray-800" for="nailBreakRarely"
         >Rarely (Less than 1 time)</label
       >
     </div>
@@ -106,8 +150,9 @@
         name="nailBreakageFrequency"
         value="occasionally"
         class="mr-2"
+        [(ngModel)]="answers.nailBreakageFrequency"
       />
-      <label for="nailBreakOccasionally" class="mr-6"
+      <label class="zilla text-gray-800" for="nailBreakOccasionally"
         >Occasionally (1-3 times)</label
       >
     </div>
@@ -118,12 +163,15 @@
         name="nailBreakageFrequency"
         value="frequently"
         class="mr-2"
+        [(ngModel)]="answers.nailBreakageFrequency"
       />
-      <label for="nailBreakFrequently">Frequently (4 or more times)</label>
+      <label class="zilla text-gray-800" for="nailBreakFrequently"
+        >Frequently (4 or more times)</label
+      >
     </div>
   </div>
   <div class="flex flex-col">
-    <p>
+    <p class="pb-2 zilla font-bold text-gray-500 text-2xl">
       When you do break your finger nails, how many fingers nails do you usually
       end up breaking?
     </p>
@@ -134,8 +182,9 @@
         name="nailBreakCount"
         value="1-2"
         class="mr-2"
+        [(ngModel)]="answers.nailBreakCount"
       />
-      <label for="nailBreak1-2" class="mr-6">1 - 2</label>
+      <label class="zilla text-gray-800" for="nailBreak1-2">1 - 2</label>
     </div>
     <div class="flex">
       <input
@@ -144,8 +193,9 @@
         name="nailBreakCount"
         value="3-4"
         class="mr-2"
+        [(ngModel)]="answers.nailBreakCount"
       />
-      <label for="nailBreak3-4" class="mr-6">3 - 4</label>
+      <label class="zilla text-gray-800" for="nailBreak3-4">3 - 4</label>
     </div>
     <div class="flex">
       <input
@@ -154,8 +204,9 @@
         name="nailBreakCount"
         value="5plus"
         class="mr-2"
+        [(ngModel)]="answers.nailBreakCount"
       />
-      <label for="nailBreak5plus" class="mr-6">5 or more</label>
+      <label class="zilla text-gray-800" for="nailBreak5plus">5 or more</label>
     </div>
     <div class="flex">
       <input
@@ -164,12 +215,13 @@
         name="nailBreakCount"
         value="none"
         class="mr-2"
+        [(ngModel)]="answers.nailBreakCount"
       />
-      <label for="nailBreakNone">0</label>
+      <label class="zilla text-gray-800" for="nailBreakNone">0</label>
     </div>
   </div>
   <div class="flex flex-col">
-    <p>
+    <p class="pb-2 zilla font-bold text-gray-500 text-2xl">
       When you experience finger nail breakage, do you believe it is primarily
       caused by?
     </p>
@@ -179,9 +231,9 @@
         id="nailBreakCauseActions"
         name="nailBreakCause"
         value="actions"
-        class="mr-2"
+        [(ngModel)]="answers.nailBreakCause"
       />
-      <label for="nailBreakCauseActions" class="mr-6"
+      <label class="zilla text-gray-800" for="nailBreakCauseActions"
         >My actions or negligence</label
       >
     </div>
@@ -191,27 +243,18 @@
         id="nailBreakCauseCircumstances"
         name="nailBreakCause"
         value="circumstances"
-        class="mr-2"
+        [(ngModel)]="answers.nailBreakCause"
       />
-      <label for="nailBreakCauseCircumstances" class="mr-6"
+      <label class="zilla text-gray-800" for="nailBreakCauseCircumstances"
         >External circumstances (e.g., accidents)</label
       >
     </div>
-    <div class="flex">
-      <input
-        type="radio"
-        id="nailBreakCauseNone"
-        name="nailBreakCause"
-        value="none"
-        class="mr-2"
-      />
-      <label for="nailBreakCauseNone">I don't get nail treatments</label>
-    </div>
   </div>
   <button
-    (click)="navigateToSubscriptionSuggestion()"
-    class="self-start border rounded bg-blue-400 text-white p-2"
+    (click)="navigateToSubscriptionSuggestion(answers)"
+    class="self-start border rounded bg-blue-400 text-white p-2 w-full py-4 text-2xl font-bold zilla"
   >
     Continue
   </button>
+  <div class="h-8 border border-transparent">{{ "" }}</div>
 </div>
