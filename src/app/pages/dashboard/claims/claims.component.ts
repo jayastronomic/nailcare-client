@@ -8,7 +8,7 @@ import { DashboardService } from 'src/app/services/dashboard/dashboard.service';
   styleUrls: ['./claims.component.css'],
 })
 export class ClaimsComponent implements OnInit {
-  public isOpen: boolean = false;
+  public isOpen: boolean = true;
   public claims: Claim[] = [];
 
   constructor(private dashboardService: DashboardService) {}
