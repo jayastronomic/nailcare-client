@@ -14,3 +14,16 @@ app-root {
 * {
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: made;
+  src: url("./fonts/made_avenue/MADEAvenuePERSONALUSE-Regular.otf");
+}
+
+.made {
+  font-family: made;
+}
+
+.zilla {
+  font-family: "Zilla Slab", serif;
+}
