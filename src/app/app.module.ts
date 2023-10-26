@@ -33,7 +33,7 @@ import { DashboardModule } from './pages/dashboard/dashboard.module';
 import { DashboardNavComponent } from './pages/dashboard/dashboard-nav/dashboard-nav.component';
 import { InsuranceComponent } from './pages/dashboard/insurance/insurance.component';
 import { AuthService } from './services/auth/auth.service';
-import { ClaimsComponent } from './claims/claims.component';
+import { ClaimsComponent } from './pages/dashboard/claims/claims.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +50,6 @@ import { ClaimsComponent } from './claims/claims.component';
     LoginComponent,
     RegisterComponent,
     ConfirmationComponent,
-    ClaimsComponent,
   ],
   imports: [
     BrowserModule,

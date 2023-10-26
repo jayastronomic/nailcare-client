@@ -12,6 +12,7 @@ import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { OverviewComponent } from './overview/overview.component';
 import { InsuranceComponent } from './pages/dashboard/insurance/insurance.component';
+import { ClaimsComponent } from './pages/dashboard/claims/claims.component';
 
 const routes: Routes = [
   {
@@ -63,6 +64,10 @@ const routes: Routes = [
       {
         path: 'insurance',
         component: InsuranceComponent,
+      },
+      {
+        path: 'claims',
+        component: ClaimsComponent,
       },
     ],
   },

@@ -14,6 +14,7 @@ import {
 } from '@ng-icons/bootstrap-icons';
 import { InsuranceComponent } from './insurance/insurance.component';
 import { DashboardService } from 'src/app/services/dashboard/dashboard.service';
+import { ClaimsComponent } from './claims/claims.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { DashboardService } from 'src/app/services/dashboard/dashboard.service';
     OverviewComponent,
     DashboardNavComponent,
     InsuranceComponent,
+    ClaimsComponent,
   ],
   imports: [
     CommonModule,

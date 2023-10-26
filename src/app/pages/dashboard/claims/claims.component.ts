@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./claims.component.css']
 })
 export class ClaimsComponent {
+  claims: 
 
 }
