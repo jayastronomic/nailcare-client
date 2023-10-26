@@ -15,6 +15,7 @@ import {
 import { InsuranceComponent } from './insurance/insurance.component';
 import { DashboardService } from 'src/app/services/dashboard/dashboard.service';
 import { ClaimsComponent } from './claims/claims.component';
+import { ClaimsContainerComponent } from './claims-container/claims-container.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ClaimsComponent } from './claims/claims.component';
     DashboardNavComponent,
     InsuranceComponent,
     ClaimsComponent,
+    ClaimsContainerComponent,
   ],
   imports: [
     CommonModule,

@@ -34,7 +34,8 @@ import { DashboardNavComponent } from './pages/dashboard/dashboard-nav/dashboard
 import { InsuranceComponent } from './pages/dashboard/insurance/insurance.component';
 import { AuthService } from './services/auth/auth.service';
 import { ClaimsComponent } from './pages/dashboard/claims/claims.component';
-import { ClaimsContainerComponent } from './claims-container/claims-container.component';
+import { ClaimsContainerComponent } from './pages/dashboard/claims-container/claims-container.component';
+import { NewClaimFormComponent } from './new-claim-form/new-claim-form.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,7 @@ import { ClaimsContainerComponent } from './claims-container/claims-container.co
     LoginComponent,
     RegisterComponent,
     ConfirmationComponent,
-    ClaimsContainerComponent,
+    NewClaimFormComponent,
   ],
   imports: [
     BrowserModule,
