@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import APIResponse from 'src/app/interfaces/APIresponse';
 import Coverage from 'src/app/interfaces/Coverage';
 import { Observable } from 'rxjs';
+import Claim from 'src/app/interfaces/Claim';
 
 @Injectable({
   providedIn: 'root',
@@ -21,5 +22,13 @@ export class DashboardService {
         },
       }
     );
+  }
+
+  getClaims(): Observable<APIResponse<Claim[]>> {
+    return this.http.get<APIResponse<Claim[]>>(this.API + '/api/v1/claims', {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem('token')}`,
+      },
+    });
   }
 }
