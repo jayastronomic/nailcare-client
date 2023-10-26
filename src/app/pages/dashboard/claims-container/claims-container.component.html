@@ -1,0 +1,17 @@
+<div *ngIf="claims.length === 0" class="flex flex-col">
+  <div class="text-2xl text-center mt-10 text-gray-200 font-bold">
+    You have no claims
+  </div>
+</div>
+
+<div
+  class="flex flex-col border rounded mt-10 p-2 bg-gray-100 h-[20rem]"
+  *ngIf="claims.length > 0"
+>
+  <div
+    class="shadow border bg-white p-2 hover:bg-blue-100 transition"
+    *ngFor="let claim of claims"
+  >
+    Claim
+  </div>
+</div>

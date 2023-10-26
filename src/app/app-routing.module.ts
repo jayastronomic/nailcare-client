@@ -6,11 +6,22 @@ import { NameEditComponent } from './name-edit/name-edit.component';
 import { AddressEditComponent } from './address-edit/address-edit.component';
 import { NailDetailsComponent } from './nail-details/nail-details.component';
 import { SuggestedSubscriptionComponent } from './suggested-subscription/suggested-subscription.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { ConfirmationComponent } from './confirmation/confirmation.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { OverviewComponent } from './overview/overview.component';
+import { InsuranceComponent } from './pages/dashboard/insurance/insurance.component';
+import { ClaimsComponent } from './pages/dashboard/claims/claims.component';
 
 const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
   },
   {
     path: 'onboarding',
@@ -31,6 +42,32 @@ const routes: Routes = [
       {
         path: 'suggestedSubscription',
         component: SuggestedSubscriptionComponent,
+      },
+      {
+        path: 'register',
+        component: RegisterComponent,
+      },
+      {
+        path: 'confirmation',
+        component: ConfirmationComponent,
+      },
+    ],
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    children: [
+      {
+        path: 'overview',
+        component: OverviewComponent,
+      },
+      {
+        path: 'insurance',
+        component: InsuranceComponent,
+      },
+      {
+        path: 'claims',
+        component: ClaimsComponent,
       },
     ],
   },

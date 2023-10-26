@@ -1,0 +1,140 @@
+<button
+  *ngIf="isOpen"
+  class="fixed flex justify-center items-center z-10 inset-0 h-full bg-black bg-opacity-50 py-32 px-8"
+>
+  <form
+    (submit)="handleSubmit()"
+    class="h-full w-full flex flex-col bg-gray-100 rounded-2xl max-w-[60rem] p-8 overflow-auto"
+  >
+    <div class="flex justify-end">
+      <button (click)="callToggleForm()">close</button>
+    </div>
+    <div class="text-2xl font-bold">New Claim</div>
+    <div class="flex flex-col">
+      <label class="self-start">Date of Incedent</label>
+      <input
+        class="rounded self-start border-gray-300 border"
+        type="date"
+        name="claimDate"
+        [(ngModel)]="newClaim.claimDate"
+      />
+    </div>
+    <div class="flex flex-col">
+      <label class="self-start">Description of Accident</label>
+      <textarea
+        class="rounded self-start resize-none h-20 border-gray-300 border"
+        type="text"
+        name="description"
+        [(ngModel)]="newClaim.description"
+      ></textarea>
+    </div>
+    <div class="grid grid-cols-2">
+      <div class="flex justify-between w-32">
+        <label>Left Pinky</label>
+        <input
+          name="leftPinky"
+          value="leftPinky"
+          type="checkbox"
+          (change)="addFinger('leftPinky')"
+        />
+      </div>
+      <div class="flex justify-between w-32">
+        <label>Left Ring</label>
+        <input
+          name="leftRing"
+          value="leftRing"
+          type="checkbox"
+          (change)="addFinger('leftRing')"
+        />
+      </div>
+      <div class="flex justify-between w-32">
+        <label>Left Middle</label>
+        <input
+          name="leftMiddle"
+          value="leftMiddle"
+          type="checkbox"
+          (change)="addFinger('leftMiddle')"
+        />
+      </div>
+      <div class="flex justify-between w-32">
+        <label>Left Pointer</label>
+        <input
+          name="leftPointer"
+          value="leftPointer"
+          type="checkbox"
+          (change)="addFinger('leftPointer')"
+        />
+      </div>
+      <div class="flex justify-between w-32">
+        <label>Left Thumb</label>
+        <input
+          name="leftThumb"
+          value="leftThumb"
+          type="checkbox"
+          (change)="addFinger('leftThumb')"
+        />
+      </div>
+      <div class="flex justify-between w-32">
+        <label>Right Pinky</label>
+        <input
+          name="rightPinky"
+          value="rightPinky"
+          type="checkbox"
+          (change)="addFinger('rightPinky')"
+        />
+      </div>
+      <div class="flex justify-between w-32">
+        <label>Right Ring</label>
+        <input
+          name="rightRing"
+          value="rightRing"
+          type="checkbox"
+          (change)="addFinger('rightRing')"
+        />
+      </div>
+      <div class="flex justify-between w-32">
+        <label>Right Middle</label>
+        <input
+          name="rightMiddle"
+          value="rightMiddle"
+          type="checkbox"
+          (change)="addFinger('rightMiddle')"
+        />
+      </div>
+      <div class="flex justify-between w-32">
+        <label>Right Pointer</label>
+        <input
+          name="rightPointer"
+          value="rightPointer"
+          type="checkbox"
+          (change)="addFinger('rightPointer')"
+        />
+      </div>
+      <div class="flex justify-between w-32">
+        <label>Right Thumb</label>
+        <input
+          name="rightThumb"
+          value="rightThumb"
+          type="checkbox"
+          (change)="addFinger('rightThumb')"
+        />
+      </div>
+    </div>
+    <div class="flex flex-col self-start">
+      <label class="self-start">Claim Amount:</label>
+      <input
+        class="border rounded border-gray-300"
+        type="number"
+        [(ngModel)]="newClaim.claimAmount"
+        name="claimAmount"
+      />
+    </div>
+    <div class="mt-20">
+      <button
+        class="bg-blue-400 text-white font-bold text-sm py-4 w-full rounded"
+      >
+        Submit Claim
+      </button>
+    </div>
+  </form>
+</button>

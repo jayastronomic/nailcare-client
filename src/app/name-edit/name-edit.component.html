@@ -2,15 +2,25 @@
   <input
     class="border rounded self-start py-2 px-2"
     placeholder="First Name"
+    [(ngModel)]="onboardingService.profile.firstName"
     required
   />
-  <input class="border rounded self-start py-2 px-2" placeholder="MI" />
   <input
     class="border rounded self-start py-2 px-2"
-    placeholder="First Name"
-    required
+    placeholder="MI"
+    [(ngModel)]="onboardingService.profile.middleInital"
   />
-  <input class="border rounded self-start py-2 px-2" placeholder="MM/DD/YYYY" />
+  <input
+    class="border rounded self-start py-2 px-2"
+    placeholder="Last Name"
+    required
+    [(ngModel)]="onboardingService.profile.lastName"
+  />
+  <input
+    type="date"
+    class="border rounded self-start py-2 px-2"
+    [(ngModel)]="onboardingService.profile.birthdate"
+  />
   <button
     (click)="navigateToAddressEdit()"
     class="self-start border rounded bg-blue-400 text-white p-2"
