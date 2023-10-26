@@ -1,4 +1,4 @@
-<div class="h-full w-full flex flex-col p-8">
+<div class="relative h-full w-full flex flex-col p-8">
   <h1 class="text-3xl font-bold">Claims</h1>
   <div class="font-bold text-lg text-gray-700">What to know</div>
   <div class="flex flex-col rounded shadow-lg border mt-8 p-4">
@@ -10,10 +10,16 @@
   </div>
   <div class="flex mt-8">
     <button
+      (click)="toggleForm()"
       class="bg-pink-400 text-white font-semibold w-full rounded py-4 shadow-md shadow-pink-400"
     >
       File a new claim
     </button>
   </div>
-  <claims-container />
+  <claims-container [claims]="claims" />
+  <app-new-claim-form
+    (claimCreated)="onClaimCreated($event)"
+    (childEvent)="toggleForm()"
+    [isOpen]="isOpen"
+  />
 </div>

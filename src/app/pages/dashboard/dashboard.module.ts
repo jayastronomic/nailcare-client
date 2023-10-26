@@ -16,6 +16,8 @@ import { InsuranceComponent } from './insurance/insurance.component';
 import { DashboardService } from 'src/app/services/dashboard/dashboard.service';
 import { ClaimsComponent } from './claims/claims.component';
 import { ClaimsContainerComponent } from './claims-container/claims-container.component';
+import { NewClaimFormComponent } from './new-claim-form/new-claim-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { ClaimsContainerComponent } from './claims-container/claims-container.co
     InsuranceComponent,
     ClaimsComponent,
     ClaimsContainerComponent,
+    NewClaimFormComponent,
   ],
   imports: [
     CommonModule,
@@ -36,6 +39,7 @@ import { ClaimsContainerComponent } from './claims-container/claims-container.co
       bootstrapShieldCheck,
       bootstrapClipboard2Check,
     }),
+    FormsModule,
   ],
   providers: [DashboardService],
 })

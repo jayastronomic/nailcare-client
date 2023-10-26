@@ -1,10 +1,10 @@
 export default interface Claim {
-  id: string;
+  id?: string;
   claimDate: string;
   description: string;
   affectedNails: string;
-  status: string;
+  status?: string;
   claimAmount: number;
-  resolutionDate: string;
-  reviewDate: string;
+  resolutionDate?: string;
+  reviewDate?: string;
 }

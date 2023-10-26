@@ -31,4 +31,16 @@ export class DashboardService {
       },
     });
   }
+
+  createClaim(newClaim: Claim): Observable<APIResponse<Claim>> {
+    return this.http.post<APIResponse<Claim>>(
+      this.API + '/api/v1/claims',
+      newClaim,
+      {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem('token')}`,
+        },
+      }
+    );
+  }
 }
