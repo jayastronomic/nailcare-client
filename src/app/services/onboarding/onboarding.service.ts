@@ -24,7 +24,7 @@ export class OnboardingService {
   };
   coverageId: string = '';
   userId: string = '';
-  suggestedSubscription: SuggestedSubscription = 'BASIC';
+  suggestedSubscription: SuggestedSubscription = 'Basic';
 
   constructor(private http: HttpClient) {}
 

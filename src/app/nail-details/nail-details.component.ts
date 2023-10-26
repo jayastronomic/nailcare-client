@@ -11,7 +11,7 @@ type Answers = {
   nailBreakCause: string;
 };
 
-export type SuggestedSubscription = 'BASIC' | 'PREMIUM' | 'STANDARD';
+export type SuggestedSubscription = 'Basic' | 'Premium' | 'Standard';
 
 @Component({
   selector: 'nail-details',
@@ -86,11 +86,11 @@ export class NailDetailsComponent {
 
     // Determine the suggested plan based on scores
     if (premiumScore >= standardScore && premiumScore >= basicScore) {
-      return 'PREMIUM';
+      return 'Premium';
     } else if (standardScore >= premiumScore && standardScore >= basicScore) {
-      return 'STANDARD';
+      return 'Standard';
     } else {
-      return 'BASIC';
+      return 'Basic';
     }
   }
 }
