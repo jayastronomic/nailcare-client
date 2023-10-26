@@ -1,10 +1,25 @@
-<div class="w-full flex flex-col p-8">
+<div class="w-full h-full flex flex-col p-8 bg-[#f5fafb]">
   <h1 class="text-3xl font-bold">Insurance</h1>
-  <div class="flex flex-col rounded shadow">
-    <div>Plan</div>
-    <div class="">{{ coverage.planName }}</div>
-    <div>${{ coverage.monthlyFee }}</div>
-    <div>{{ coverage.planDescription }}</div>
-    <div>Number of nails covered: {{ coverage.coverageLimit }}</div>
+  <div
+    class="flex flex-col rounded shadow-xl bg-white p-8 space-y-4 mt-8 border border-blue-200 shadow-blue-200"
+  >
+    <div class="flex flex-col">
+      <div class="text-2xl text-[#2D95E5] font-bold">Plan</div>
+      <div class="zilla">{{ coverage.planName }}</div>
+    </div>
+    <div class="flex flex-col">
+      <div class="zilla text-[#2D95E5]">Pricing</div>
+      <div class="zilla">${{ coverage.monthlyFee }}</div>
+    </div>
+
+    <div class="flex flex-col zilla">
+      <div class="text-[#2D95E5]">Plan Description</div>
+      <div>{{ coverage.planDescription }}</div>
+      <div>Number of nails covered: {{ coverage.coverageLimit }}</div>
+    </div>
+    <div class="flex flex-col">
+      <div class="zilla text-[#2D95E5]">Policy Number</div>
+      <div class="zilla">PN3004-234342</div>
+    </div>
   </div>
 </div>
