@@ -1,27 +1,47 @@
-# NailcareClient
+# NailSurent - Client Side
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+## Description
 
-## Development server
+The NailSurent client-side application is the user-facing interface for NailSurent, a nail insurance platform. This application provides a user-friendly environment for customers to interact with NailSurent's services, including registration, plan subscription, claim filing, and plan information viewing.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- **User Registration:** Register for a NailSurent account by providing your name, email, and password. Upon registration, you will receive a confirmation email to verify your account.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Plan Subscription:** Choose from Basic, Standard, or Premium insurance plans based on your coverage needs and preferences.
 
-## Build
+- **View Plan Information:** Access detailed information about your active insurance plan, including coverage limits, deductible, and effective dates.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Claim Filing:** File claims for nail services, allowing you to request coverage for unexpected issues. The claim form includes fields for service date, incident description, and supporting documents.
 
-## Running unit tests
+- **View Claims:** Keep track of your filed claims with a dedicated section that provides status updates and related details.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Installation
 
-## Running end-to-end tests
+To set up the NailSurent client-side application, follow these steps:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. Clone the repository:
 
-## Further help
+```bash
+git clone https://github.com/jayastronomic/nailcare-client.git
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+2.Navigate to the project directory:
+
+```bash
+cd nailcare-client
+```
+
+3. Install dependencies:
+
+```bash
+npm install
+```
+
+4.Configure the API base URL to match the location of the running NailSurent backend.
+
+Run the client-side application using Angular's development server:
+
+```bash
+ng serve
+```
